@@ -4,14 +4,26 @@
 <head>
   <meta charset="utf-8">
   <title>Robot Job Site!</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
+  {{#things}}
+  <div class="botBox" id={{id}}>
+    <img src={{avatar}}/>
+    <h2>{{name}}</h2>
+    {{#job}}
+    <p>{{job}},{{company}}</p>
+    {{/job}}
+    {{^job}}
+    <p class="jobLess">Available for hire!</p>
+    {{/job}}
+  </div>
+  {{/things}}
+  <script type="text/javascript" src="main.js"></script>
 </body>
-
 </html>
 
+<!--
 {"id":1,
 "username":"hjuza0",
 "name":"Hamlen Juza",
@@ -31,4 +43,4 @@ Bode",
   "postal_code":"188950",
   "country":"Russia"
   }
-}
+} -->
